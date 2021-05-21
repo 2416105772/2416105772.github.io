@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>2416105772</title>
+  
+  <subtitle>爱上这个世界</subtitle>
+  <link href="https://2416105772.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://2416105772.github.io/"/>
+  <updated>2021-05-10T10:24:08.098Z</updated>
+  <id>https://2416105772.github.io/</id>
+  
+  <author>
+    <name>2416105772</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo的next主题优化</title>
+    <link href="https://2416105772.github.io/2021/05/10/hexo-de-next-zhu-ti-you-hua/"/>
+    <id>https://2416105772.github.io/2021/05/10/hexo-de-next-zhu-ti-you-hua/</id>
+    <published>2021-05-10T10:20:46.000Z</published>
+    <updated>2021-05-10T10:24:08.098Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="1、Next主题的启用"><a href="#1、Next主题的启用" class="headerlink" title="1、Next主题的启用"></a>1、Next主题的启用</h1><p>在Hexo下面的themes中，右键 选择Git base here</p><p>复制这行代码</p><pre class="line-numbers language-none"><code class="language-none">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>等待完成后，打开Hexo的这个文件</p><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly90YWNvdHVlc2RheXl5Lm9zcy1jbi1zaGVuemhlbi5hbGl5dW5jcy5jb20vdW1nL2ltYWdlLTIwMjAwNjI4MTM1NjI2NDYzLnBuZw?x-oss-process=image/format,png" alt="image-20200628135626463"></p><p>找到 theme</p><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly90YWNvdHVlc2RheXl5Lm9zcy1jbi1zaGVuemhlbi5hbGl5dW5jcy5jb20vdW1nL2ltYWdlLTIwMjAwNjI4MTM1MTA1Nzg5LnBuZw?x-oss-process=image/format,png" alt="image-20200628135105789"></p><p>把 theme 后面的 landscape 改成 next 即可；</p><p>然后在Hexo文件夹中 右键 Git base here</p><p>输入以下命令，启动本地预览</p><p>出现下面两个INFO表示成功，在浏览器中进入<a href="http://localhost:4000进行查看；">http://localhost:4000进行查看；</a></p><p>查看后需要关闭的话 则要在命令行输入Ctrl + c 结束；</p><p>这样 next主题就启动成功了；</p><p>2、更改Next主题为中文<br>同样打开Hexo的_config.yml文件，这是配置文件</p><p>找到Site 下的 language ，改成zh-CN即可</p><p>然后在命令行可开启本地预览查看；</p><p>3、添加标签页和分类页<br>打开文件</p><p>找到meau 然后把tags 和 categories前面的#号去掉，然后保存</p><p>然后本地预览 可发现</p><p>但是点进去后不会显示，因为你没有创建标签页和分类页</p><p>4、正确打开标签页和分类页<br>进入文件夹</p><p>启动git命令行</p><p>输入命令： hexo n page tags</p><p>就会在source中创建tags文件夹，并在里面创建index.md文件，表示已经可以使用；</p><p>然后打开index.md 进行修改</p><p>注意冒号后面必须有一个空格；</p><p>对于分类页同理，hexo n page categories 然后修改的时候type: “categories”；</p><p>5、主题样式的更改<br>在next的主题配置文件里面 找到Schemes ，发现有四种主题：</p><p>要用哪个就把哪个前面的#去掉，其它的三个加上# (#代表注释)；</p><p>Muse：</p><p>Mist：</p><p>pisces：</p><p>Gemini：</p><p>改完保存，本地预览即可；</p><p>6、更改图像<br>在next配置文件中，找到</p><p>默认就是这个样子</p><p>更改的话只需改url后面的网站，网站的内容就是你将用的图像；</p><p>7、更改标题、作者和链接<br>在Hexo的配置文件下，找到</p><p>然后对这些进行修改 保存即可；</p><p>8、启动侧边栏社交链接<br>打开next的配置文件中，找到social links</p><p>对后面的链接进行修改 然后去掉# 即可显示；</p><p>注意 #号是注释作用，只有去掉#号才能生效；</p><p>9、启用友情链接<br>在next的配置文件中 找到</p><p>links：</p><p>名称: url</p><p>显示出来是这样：</p><p>上面那个title：Links也是可以改的，比如我改成友情链接，显示是这样：</p><p>10、新建一篇文章<br>Hexo文件中打开命令行；</p><p>输入：hexo n 文件名<br>//在Hexo\source_posts下建立对应.md形式的文件<br>1<br>2</p><p>进入本地预览；</p><p>11、markdown基本使用<br>创建一个测试文档</p><p>输入— 然后回车，头部格式就出来了，接着输入该文档的title、tag、categories、description等待；就是下面这样：</p><p>插入链接<br>[ 链接标题 ]（链接url）</p><p>插入图片/文件<br>！[ 文件标题 ]（文件/图片url）</p><p>斜体<br>两个*号中间的内容是斜体</p><p>字体是斜的</p><p>粗体<br>两个**号之间的是粗体</p><p>字体是粗的</p><p>插入代码块<br>单行：//单行代码</p><p>代码块：</p><p>// 代码块x<br>// xx<br>// xx<br>1<br>2<br>3<br>引用<br>输入一个&gt; 随后输入的内容就是引用；</p><p>分割线<br>连续三个 - 或者 三个 *，然后回车</p><p>12、开启打赏功能<br>next里面的配置文件中，找到Reward</p><p>然后enable 和 animation 设置为true</p><p>并添加个人的微信收款码和支付宝收款码；</p><p>放到 next/source/images 中；</p><p>13、开启订阅公众号<br>在next的配置文件中找到subscribe</p><p>可通过以下四个方式订阅，也可添加；</p><p>14、设置头像为圆形可旋转<br>需要对这个文件进行修改；</p><p>按下图修改</p><p>然后直接打开next的配置文件，找到avatar</p><p>把rounded和rotated设置为true；</p><p>rounded是说要不要把图像设置为圆形；</p><p>rotated是说要不要让它转，如果要修改转的一些详细信息，就要到之前说的那个siderbar-author那个文件去修改；</p><p>15、首页文章设置阅读全文<br>next的配置文件下，找到这里</p><p>把这两个都设置为true，默认应该是true；</p><p>然后有两种方法：</p><p>法1：</p><p>在博客的头部 添加description，然后在后面输入你的描述，那么在你的博客中，这篇文章就只会显示你写的描述，剩下的由阅读全文这个按钮代替；</p><p>法2：</p><p>在文章中输入这一行代码，那么默认这行代码之前的部分为描述，之后的部分在阅读全文中显示；</p><p>16、添加动态背景<br>今天在学习使用Hexo修改next的背景时，发现：</p><p>这几个东西我无论设置哪些个为true，都调不出动态背景；<br>随后开始在网上搜，发现大多都是针对老版本的NexT调动态背景或者canvas_nest的解决方法，不过也受到一些启发，这里就用新版本的演示一下：</p><p>1、首先看这里</p><p>Dependencies: <a href="https://github.com/theme-next/theme-next-three">https://github.com/theme-next/theme-next-three</a><br>表示这三个动态背景依赖于git克隆(clone)才能使用；</p><p>2、然后在next文件下打开Git命令行界面，准备clone<br>输入命令后，等待下载；</p><p>下载后就会有一个这样的文件出现在next文件夹中</p><p>只需要将此文件重命名为three，然后剪贴到next/source/lib文件下下面即可；</p><p>3、依赖包已经克隆了，之后就只用改之前那几个参数就能调选择你喜欢的动态背景了；</p><p>调完后，hexo s 本地预览下；</p><p>如果你对canva_nest有着独特的喜爱，那就clone它的依赖包放入next/source/lib中，然后千万记得，在next的_config.yml文件中加上这样两句话：</p><p> 想打开时，把enable置为true即可，这个与上面动态背景总开关没联系！等于说你可以上面设为false，canvas_nest设置为true，它一样可以用这个动态背景！</p><p>17、给博客添加fork Github<br>进入这个网站GitHub Corners</p><p>选一个心仪的图标，然后复制它旁边框框里的内容；</p><p>打开文件</p><p>搜索headband，在它下面插入这段复制的内容；</p><p>然后把 href 那里的网址改成自己github的地址！！！</p><p>保存，再本地预览即可看见；</p><p>18、修改文章内链接样式<br>打开next内部的这个文件：</p><p>在此文件的最后面加上代码块：</p><p>.post-body p a{<br>  color: #345;<br>  border-bottom: none;<br>  &amp;:hover{<br>    color: white;<br>  }<br>}<br>1<br>2<br>3<br>4<br>5<br>6<br>7</p><p>19、怎样修改文章底部#标签式样<br>打开这个文件：</p><p>找到这个位置</p><p>在 rel=“tag”&gt; 后插入</p><p>图标可以在Font awesome中找自己喜欢的，替换就行；</p><p>20、增加Valine评论功能<br>注册LeanCloud网站</p><p>实名认证</p><p>验证邮箱</p><p>然后创建应用，进入应用设置</p><p>进入之后，复制应用Keys下的AppID和Appkey；</p><p>在next的配置文件中找到如图valine位置</p><p>更改为</p><p>将自己的appid和appkey复制过去；</p><p>保存；</p><p>21、增加搜索功能<br>next的配置文件中，置local_search为true</p><p>22、增加不蒜子统计功能<br>next的配置文件中找到这个并置为true；</p><p>23、内容分享服务（未完成）</p><p>24、增加加载效果</p><p>置为true；</p><p>然后在next下，打开git命令行，输入</p><p>git clone <a href="https://github.com/theme-next/theme-next-pace">https://github.com/theme-next/theme-next-pace</a></p><p>等待依赖包下载成功即可；</p><p>25、增加点击爆炸效果(未完成)<br>26、隐藏底部 强力驱动</p><p>置为false就行；</p><p>27、增加字数统计和阅读时长功能(未完成)</p><p>clone了包，开了true，不知道为啥还是不行；</p><p>28、我的博客<br>欢迎大家来看我的博客：liujie661.top的博客；<br>————————————————<br>版权声明：本文为CSDN博主「Luweir23」的原创文章，遵循CC 4.0 BY-SA版权协议，转载到liujie661.top的博客<br>原文链接：<a href="https://blog.csdn.net/wyll19980812/article/details/107016680">https://blog.csdn.net/wyll19980812/article/details/107016680</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+    <category term="前提是已经安装Node.js 、Git 和Hexo以及注册Github账户；" scheme="https://2416105772.github.io/tags/%E5%89%8D%E6%8F%90%E6%98%AF%E5%B7%B2%E7%BB%8F%E5%AE%89%E8%A3%85Node-js-%E3%80%81Git-%E5%92%8CHexo%E4%BB%A5%E5%8F%8A%E6%B3%A8%E5%86%8CGithub%E8%B4%A6%E6%88%B7%EF%BC%9B/"/>
+    
+  </entry>
+  
+</feed>
